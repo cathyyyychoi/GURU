@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>경희대학교 SW비교과프로그램</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<nav class="left">
+					<a href="#menu"><span>Menu</span></a>
+				</nav>
+				<a href="/" class="logo">KyungHee SW EdU</a>
+				<nav class="right">
+					<a href="/login" class="button alt">Admin</a>
+				</nav>
+			</header>
+
+			<!-- Menu -->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="/khuthon">KHU 해커톤</a></li>
+						<li><a href="/ACM_ICPC">ACM ICPC 프로그래밍 경시대회</a></li>
+						<li><a href="/SW_Festival">SW 페스티벌</a></li>
+						<li><a href="/Academic_Program">학생회 학술 프로그램</a></li>
+						<li><a href="/R&D">연구연수활동</a></li>
+						<li><a href="/notice">공지사항</a></li>
+
+					</ul>
+				</nav>
+
+
+      <div class="wrapper">
+      	<div class="container">
+      		<h1>관리자 로그인</h1>
+
+      		<form class="form" action='/login' method='post'>
+      			<input type="text" id='id' name='id' placeholder="ID">
+      			<input type="password" id='pwd' name='pwd' placeholder="Password">
+            <br>
+      			<button type="submit"  id="login-button">Login</button>
+      		</form>
+      	</div>
+
+      </div>
+
+
+
+		<!-- Scripts -->
+			<script src="js/jquery.min.js"></script>
+			<script src="js/jquery.scrolly.min.js"></script>
+			<script src="js/skel.min.js"></script>
+			<script src="js/util.js"></script>
+			<script src="js/main.js"></script>
+
+	</body>
+</html>
