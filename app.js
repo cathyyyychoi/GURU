@@ -19,8 +19,8 @@ app.use(session({
 }));
 
 let user={
-  user_id: "kayoung",
-  user_pwd: 'kayoung'
+  user_id: "admin",
+  user_pwd: 'admin_1234'
 };
 
 /*
