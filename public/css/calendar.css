@@ -1,0 +1,27 @@
+@charset "UTF-8";
+@import url(font-awesome.min.css);
+@import "https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap"
+table.type11 {
+    border-collapse: separate;
+    border-spacing: 1px;
+    text-align: center;
+    line-height: 1.5;
+    margin: 20px 10px;
+}
+table.type11 th {
+    text-align: center;
+    width: 155px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: #fff;
+    background: #767d85 ;
+}
+table.type11 td {
+    text-align: center;
+    width: 155px;
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 2px solid #ccc;
+    background: #eee;
+}
