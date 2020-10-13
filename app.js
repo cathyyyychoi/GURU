@@ -3,6 +3,9 @@ app = express();
 http=require('http');
 fs=require('fs');
 
+
+app.use('/posts', require('./routes/posts'));
+
 //mongoDB
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/test');
@@ -116,12 +119,14 @@ app.get('/R&D',function(request, response){
   });
 });
 
-app.get('/notice',function(request, response){
-  fs.readFile('public/notice.html',function(error, data){
-    response.writeHead(200, {'Content-Type':'text/html'});
+/*
+app.get('/posts',function(request, response){
+  fs.readFile('./models/posts.js',function(error, data){
+    response.writeHead(200, {'Content-Type':'text/js'});
     response.end(data);
   });
 });
+*/
 
 
 
