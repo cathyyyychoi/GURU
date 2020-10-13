@@ -3,6 +3,15 @@ app = express();
 http=require('http');
 fs=require('fs');
 
+//mongoDB
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/test');
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function callback () {
+    console.log("mongo db connection OK.");
+});
+
 session=require('express-session');
 FileStore=require('session-file-store')(session);
 bodyParser=require('body-parser');
