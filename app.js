@@ -132,6 +132,13 @@ app.get('/R&D',function(request, response){
   });
 });
 
+app.get('/photo',function(request, response){
+  fs.readFile('public/photo.html',function(error, data){
+    response.writeHead(200, {'Content-Type':'text/html'});
+    response.end(data);
+  });
+});
+
 /*
 app.get('/posts',function(request, response){
   fs.readFile('./models/posts.js',function(error, data){
