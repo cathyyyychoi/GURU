@@ -35,6 +35,13 @@ let user={
   user_pwd: 'admin_1234'
 };
 
+
+function isLoggedin(req, res, next){
+  if (req.isAuthenticated()){
+    return next();
+  }
+}
+
 /*
 app.get('/login',function(request, response){
   fs.readFile('public/login.html',function(error, data){
@@ -66,7 +73,13 @@ app.post('/logout',(request, response) => {
   response.redirect('/login');
 });
 
-
+/*
+app.use(function(req,res,next){
+  res.locals.isAuthenticated = req.isAuthenticated();
+  res.locals.currentUser = req.user;
+  next();
+});
+*/
 var path = require('path');
 app.use(express.static(path.join(__dirname, 'public')));
 console.log(__dirname);
@@ -127,8 +140,6 @@ app.get('/posts',function(request, response){
   });
 });
 */
-
-
 
 
 app.listen(8000, function(){

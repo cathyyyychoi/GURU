@@ -59,3 +59,10 @@ router.delete('/:id', function(req, res){
 });
 
 module.exports = router;
+
+
+function checkPermission(req, res, next){
+  if(err) return res.json(err);
+  if(post.author != 'admin') return util.noPermission(req, res);
+    next();
+  }
