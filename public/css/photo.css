@@ -21,6 +21,11 @@
 		width: 1200px;
 	}
 
+	img{
+		width : 400px;
+		height: 200;
+		object-fit: cover;
+	}
 	/* Modifiers */
 
 		.container.small {
